@@ -1,5 +1,21 @@
 /* ELIMINAMOS LOS ESTILOS DE NAVEGADOR */
 @import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 /* AÑADE AQUÍ TUS ESTILOS */
+*{
+    font-family: 'Sen', sans-serif;
+}
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.usuarioCard{
+    background-color: #F3F3F3;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 35px;
+    padding: 0;
+    margin-bottom: 70px;
+}

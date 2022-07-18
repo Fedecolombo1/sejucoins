@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+
+header{
+  margin: 0;
+}
+
+.nombre{
+    color: #212529 !important;
+    font-size: 32px;
+    margin: 0;
+    text-align: end;
+    text-decoration: none !important;
+    font-family: 'Sen', sans-serif;
+}
+
+@media (min-width: 768px) {
+
+    .navbar{
+      background-color: #fbfbfb;
+      border-bottom: 1px solid #bfbfbf;
+      height: 80px;
+      margin-bottom: 80px;
+    }
+
+    .links{
+        margin-bottom: 0px;
+    }
+
+    .navLinks{
+        color: #959595;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /* padding-left: 40px;
+        padding-right: 40px; */
+        position: relative;
+        text-decoration: none;
+    }
+
+    .navLinks:hover{
+        color: #333333;
+    }
+
+    .nombre{
+        text-align: start !important;
+        margin-left: 20px !important;
+        text-decoration: none !important;
+    }
+
+    a h1.nombre{
+      text-decoration: underline none !important;
+    }
+
+    .links > a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #333333 !important;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+    .links > a:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+
+    .links > button::before {
+        color: #212529;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #4658F8 !important;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    .links > button:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+    }     
+
+    .botonC{
+        border: none;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 30px;
+        text-decoration: none !important;
+        background: linear-gradient( 105.3deg,  rgba(30,39,107,1) 21.8%, rgba(77,118,221,1) 100.2% );
+        background: #4658F8;
+        color: #fff;
+        z-index: 10000;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        transform: scale(1.0);
+        transition: .7s;
+      }
+      
+    .botonC:hover{
+        background: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+        background: #08E4D6;
+        color: #4658F8;
+        transform: scale(1.1);
+        transition: .7s;
+      } 
+}  
