@@ -8,32 +8,29 @@ import firebaseApp from '../../firebase/credenciales'
 import {getAuth, signOut} from 'firebase/auth'
 const auth = getAuth(firebaseApp);
 
+const image = require("../../images/logo.jpg").default;
+
 const NavBar = ({user}) => {
   return (
     <>
     {user.rol === "admin" ? 
-      <header className="navbar">
-        <Link className="col-1" to="/">
-          <h1 className="col-12 nombre">Seju</h1>
+    <>
+      <header className="navbar align">
+        <Link className="col-lg-4 col-12 link" to="/">
+        <h1 className="col-12 align nombre">SeJu Turdera Oficial <img src={image} className="logo"/></h1>
         </Link>
-        <div className="col-xl-7 col-lg-9 row align">
-            <h2 className="col-2 align links">
-              <NavLink to="/" className="navLinks">
-                  Tribus
-              </NavLink>
-            </h2>
-        </div>
-        <button onClick={()=> signOut(auth)}>Cerrar sesion</button>
+        <button className="botonC" onClick={()=> signOut(auth)}>Cerrar sesion</button>
       </header>
+    </>
       :
-    <div>
-      <header className="navbar">
-        <Link className="col-1" to="/">
-          <h1 className="col-12 nombre">Seju</h1>
+    <>
+      <header className="navbar align">
+        <Link className="col-lg-4 col-12 link" to="/">
+          <h1 className="col-12 row align nombre">SeJu Turdera Oficial <img src={image} className="logo"/></h1>
         </Link>
-        <button onClick={()=> signOut(auth)}>Cerrar sesion</button>
+        <button className="botonC" onClick={()=> signOut(auth)}>Cerrar sesion</button>
       </header>
-    </div>
+    </>
     }
       
     </>

@@ -4,12 +4,12 @@ import Item from './Item/Item'
 
 function AdminView({user}) {
   return (
-    <div>
-      <div className="row align col-12">
+    <>
+      <div className="row">
         <NavBar user={user}/>
         <Item />
       </div>
-    </div>
+    </>
   )
 }
 

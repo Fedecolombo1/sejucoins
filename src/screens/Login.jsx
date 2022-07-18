@@ -45,19 +45,27 @@ function Login() {
     }
   }
   return (
-    <div>
-      <h1 className='col-12 align'>"Iniciar Sesion"</h1>
-      <form className='col-12 row align' onSubmit={submitHandler}>
-        <label className='col-7 align'>
-          Email
-          <input type="email" id='email'></input>
-        </label>
-        <label className='col-7 align'>
-          Contrasenia
-          <input type="password" id='password'></input>
-        </label>
-        <input type="submit" value='Iniciar sesion' />
-      </form>
+    <div className='container-fluid'>
+      <div className="row align loginCont">
+        <h1 className='col-12 align iniciarSesion'>"Iniciar Sesion"</h1>
+        <form className='col-12 row align' onSubmit={submitHandler}>
+          <div className="col-12 align">
+            <label className='col-8 col-lg-4'>Email</label>
+          </div>
+          <div className="col-12 align">
+            <input className='col-8 col-lg-4 align inpSesion' type="email" id='email'></input>
+          </div>
+          <div className="col-12 align">
+             <label className='col-8 col-lg-4'>Contrasenia</label>
+          </div>
+          <div className="col-12 align">
+            <input className='col-8 col-lg-4 align inpSesion' type="password" id='password'></input>
+          </div>
+          <div className="col-12 align">
+            <input type="submit" className='col-8 col-lg-4 botonC' value='Iniciar sesion' />
+          </div>
+        </form>
+      </div>
       
       {/* <button onClick={() => setIsRegistrando(!isRegistrando)}>{isRegistrando ? "Ya tengo una cuenta" : "Quiero registrarme"}</button> */}
       

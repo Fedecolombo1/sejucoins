@@ -5,7 +5,7 @@ import UserView from "../Components/UserView"
 
 function Home({ user }) {
   return (
-    <div>
+    <div className='container-fluid'>
       {user.rol === "admin" ? <AdminView user={user} /> : <UserView user={user} />}
     </div>
   )

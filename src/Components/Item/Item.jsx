@@ -42,33 +42,37 @@ const Item = () => {
 
   return (
     <>
-    <div className="row align">
+    <div className="col-12">
+      <div className="row">
         {users.map((user) => {
-          return (
-              <div className="product col-11 col-lg-4 col-xl-2 col-md-4 row align" key={user.id}>
-                {" "}
-                <h1>Name: {user.email}</h1>
-                <h1>SejuCoins: {user.coins}</h1>
-                <button
-                  onClick={() => {
-                    sumar(user.id, user.coins);
-                  }}
-                >
+              if(user.rol !== "admin"){
+                return (
+                <div className="product col-11 col-lg-4 col-xl-2 col-md-4 row align" key={user.id}>
                   {" "}
-                  Sumar
-                </button>
-                <button
-                  onClick={() => {
-                    restar(user.id, user.coins);
-                  }}
-                >
-                  {" "}
-                  Restar
-                </button>
-              </div>
-          );
-        })}
+                  <h1>Name: {user.email}</h1>
+                  <h1>SejuCoins: {user.coins}</h1>
+                  <button className="botonC"
+                    onClick={() => {
+                      sumar(user.id, user.coins);
+                    }}
+                  >
+                    {" "}
+                    Sumar
+                  </button>
+                  <button className="botonC"
+                    onClick={() => {
+                      restar(user.id, user.coins);
+                    }}
+                  >
+                    {" "}
+                    Restar
+                  </button>
+                </div>
+                );
+              }
+          })}
       </div>
+    </div>
     </>
   );
 };

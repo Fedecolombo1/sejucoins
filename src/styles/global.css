@@ -4,7 +4,7 @@
 
 /* AÑADE AQUÍ TUS ESTILOS */
 *{
-    font-family: 'Sen', sans-serif;
+    font-family: 'Sen', sans-serif !important;
 }
 .align{
     display: flex;
@@ -12,10 +12,47 @@
     align-items: center;
 }
 
+.logo{
+    width: 90px;
+    padding: 0;
+}
+.contUser{
+    height: 80vh;
+    margin: 0;
+}
 .usuarioCard{
-    background-color: #F3F3F3;
+    background-color: rgb(250, 250, 250);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin: 35px;
-    padding: 0;
+    padding: 40px;
     margin-bottom: 70px;
+}
+.tribu{
+    text-align: start;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.coins{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.loginCont{
+    color: white;
+    height: 100vh;
+    align-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/logo.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iniciarSesion{
+    margin-bottom: 20px;
+}
+
+.inpSesion{
+    margin-top: 3px;
+    margin-bottom: 12px;
 }
