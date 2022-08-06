@@ -11,7 +11,7 @@ function UservView({ user }) {
     <>
       <div className="row">
         <NavBar user={user}/>
-          <div className="row align col-12 contUser">
+          <div className="align col-12 contUser">
             <div className="usuarioCard col-lg-4 col-12">
               <h1 className='col-12 tribu'>Tribu: {user.email}</h1>
               <h1 className='col-12 coins'>SejuCoins</h1>

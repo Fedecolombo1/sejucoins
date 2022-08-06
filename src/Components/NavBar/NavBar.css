@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
+.logo{
+  width: 90px !important;
+  padding: 0;
+}
 
 header{
   margin: 0;
@@ -35,6 +39,7 @@ header{
   padding-bottom: 8px;
   transform: scale(1.0);
   transition: .7s;
+  margin-bottom: 10px;
 }
 
 .botonC:hover{
@@ -44,6 +49,10 @@ header{
   transform: scale(1.1);
   transition: .7s;
 } 
+
+.navbar{
+  justify-content: center !important;
+}
 
 @media (min-width: 768px) {
 

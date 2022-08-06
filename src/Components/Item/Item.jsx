@@ -13,7 +13,9 @@ const Item = () => {
 
   const getUsers = async () => {
     const data = await getDocs(usersCollectionRef);
-    setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    let usuarios = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    let usuariosOrdenados = usuarios.sort(function(a, b){return a.numTribu - b.numTribu});
+    setUsers(usuariosOrdenados);
   };
 
   const sumar = async(id, coins) =>{
@@ -33,7 +35,9 @@ const Item = () => {
   useEffect(() => {
     const getUsers = async () => {
       const data = await getDocs(usersCollectionRef);
-      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      let usuarios = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      let usuariosOrdenados = usuarios.sort(function(a, b){return a.numTribu - b.numTribu});
+      setUsers(usuariosOrdenados);
     };
 
     getUsers();
@@ -49,8 +53,9 @@ const Item = () => {
                 return (
                 <div className="product col-11 col-lg-4 col-xl-2 col-md-4 row align" key={user.id}>
                   {" "}
-                  <h1>Name: {user.email}</h1>
-                  <h1>SejuCoins: {user.coins}</h1>
+                  <h1 className="col-12 titulo">Tribu {user.numTribu}</h1>
+                  <h1 className="col-12 titulo">{user.email}</h1>
+                  <h1 className="col-12 titulo">SejuCoins: {user.coins}</h1>
                   <button className="botonC"
                     onClick={() => {
                       sumar(user.id, user.coins);

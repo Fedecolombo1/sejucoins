@@ -4,7 +4,7 @@ import {
   Routes as Routess,
   Route
 } from "react-router-dom";
-import Home from './screens/Home'
+import Registrar from './screens/Registrar'
 import App from './App'
 
 export default function Routes() {
@@ -13,6 +13,7 @@ export default function Routes() {
         
         <Routess>
             <Route path="/" element={<App />} />
+            <Route path="/registrar" element={<Registrar />} />
         </Routess>
 
     </Router>
