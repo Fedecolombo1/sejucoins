@@ -29,7 +29,7 @@ function Registrar() {
         })
     
         const docuRef = await doc(firestore, `usuarios/${infoUsuario.user.uid}`)
-        setDoc(docuRef, {email: email, rol: rol, coins: 5, numTribu: numTribu})
+        setDoc(docuRef, {email: email, rol: rol, coins: 200, numTribu: numTribu})
       }
 
   return (
